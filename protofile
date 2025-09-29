@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message UserProfile {
+  string name = 1;
+  string role = 2;
+  string about = 3;
+}
+
+service PortfolioService {
+  rpc GetProfile (UserProfile) returns (UserProfile);
+}
